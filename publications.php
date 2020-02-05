@@ -49,23 +49,71 @@
 
 								<h3>Publications</h3>
 
-								<h4> 2020 </h4>
-								<p> T. Hepp, A. Othman, A. Liebgott, J. H. Kim, C. Pfannenberg and S. Gatidis <br>
-								<b> Effects of simulated dose variation on contrast-enhanced CT-based radiomic analysis for Non-Small Cell Lung Cancer </b><br>
-									<i> European Journal of Radiology</i>, January 2020, doi: 10.1016/j.ejrad.2019.108804
-								</p>
-<p>								<p> T. Hepp, A. Othman, A. Liebgott, J. H. Kim, C. Pfannenberg and S. Gatidis <br>
-								<b> Effects of simulated dose variation on contrast-enhanced CT-based radiomic analysis for Non-Small Cell Lung Cancer </b><br>
-									<i> European Journal of Radiology</i>, January 2020, doi: 10.1016/j.ejrad.2019.108804
-								</p>
-								<hr />
-								<h4> 2019 </h4>
-								<p> ...</p>
+								<?php
 
-								<hr />
+								require __DIR__ . '/vendor/autoload.php';
 
-								<h4> 2018 </h4>
-								<p> ...</p>
+								use GScholarProfileParser\DomCrawler\ProfilePageCrawler;
+								use GScholarProfileParser\Iterator\PublicationYearFilterIterator;
+								use GScholarProfileParser\Parser\PublicationParser;
+								use GScholarProfileParser\Parser\PublicationParserURL;
+								use GScholarProfileParser\Entity\Publication;
+								use Goutte\Client;
+
+								/** @var Client $client */
+								$client = new Client();
+
+								// Thomas, Sergios,
+								$googleids = array('Oo6NZZcAAAAJ', '7vCEi-gAAAAJ');
+								$publications = array();
+								foreach($googleids as $uid)
+								{
+								  /** @var ProfilePageCrawler $crawler */
+								  $crawler = new ProfilePageCrawler($client, $uid); // the second parameter is the scholar's profile id
+
+								  /** @var PublicationParser $parser */
+								  $parser = new PublicationParser($crawler->getCrawler());
+
+								  /** @var array<int, array<string, string>> $publications */
+								  $publicationsCurr = $parser->parse();
+								  $publications=array_merge($publications, $publicationsCurr);
+								}
+								// remove duplicates
+								$publications = array_intersect_key($publications, array_unique(array_column($publications, 'title')));
+
+								// hydrates items of $publications into Publication
+								foreach ($publications as &$publication) {
+										/** @var Publication $publication */
+								    $publication = new Publication($publication);
+								}
+								unset($publication);
+
+								$currYear = (int)date('o');
+
+								for($year=$currYear; $year>=2005; $year--){
+
+								    /** @var PublicationYearFilterIterator $publications2018 */
+								    $publicationsCurr = new PublicationYearFilterIterator(new ArrayIterator($publications), $year);
+
+								    //print_r($publicationsCurr);
+								    if(iterator_count($publicationsCurr) == 0)
+								    {
+								      continue;
+								    }
+								    echo "<h4>" . $year . "</h4><p>";
+								    // displays list of publications published in 2018
+								    /** @var Publication $publication */
+								    foreach ($publicationsCurr as $publication) {
+								        //echo $publication->getPublicationURL(), "<br>";
+								        echo $publication->getAuthors() . "<br>";
+								        echo "<b><a href='" . $publication->getPublicationURL() . "' target='_blank'>" . $publication->getTitle() . "</a></b><br>";
+								        echo "<i>" . $publication->getPublisherDetails() . "</i>, ";
+								        //echo $publication->getNbCitations(), " ";
+								        //echo $publication->getCitationsURL(), "<br>";
+								        echo $publication->getYear() . "</p><br>";
+								    }
+										echo "<hr />";
+								} ?>
 
 							</div>
 						</section>
