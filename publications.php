@@ -31,7 +31,7 @@
 											<li><a href="people.html">People</a></li>
 											<li><a href="research.html">Research</a></li>
 											<li><a href="teaching.html">Teaching</a></li>
-											<li><a href="publications.html">Publications</a></li>
+											<li><a href="publications.php">Publications</a></li>
 										</ul>
 									</div>
 								</li>
