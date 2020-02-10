@@ -6,16 +6,37 @@
 -->
 <html>
 	<head>
-		<title>Generic - Spectral by HTML5 UP</title>
+		<title>People</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+	<!--	<link rel="stylesheet" href="assets/css/all.css">-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+		<svg aria-hidden="true" class="icon" style="fill=currentColor" version="1.1" width="0" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<defs>
+		<symbol id="icon-googlescholar" viewBox="0 0 32 32">
+		<title>Google scholar</title>
+		<path style="fill=currentColor" d="M14.573 2.727c-0.729 0.488-4.293 2.853-7.917 5.26-3.627 2.405-6.589 4.395-6.589 4.419 0 0.025 0.181 0.147 0.407 0.267 0.223 0.128 3.8 2.111 7.953 4.413l7.541 4.191 0.192-0.099c0.109-0.053 2.892-1.643 6.189-3.523l5.991-3.424 0.036 10.596h3.557v-12.401l-4.613-3.093c-6.219-4.165-11.189-7.448-11.312-7.475-0.060-0.011-0.703 0.383-1.435 0.869zM7.14 22.177l0.019 2.673 8.827 5.292 4.449-2.667 4.443-2.673v-2.643c0-1.456-0.017-2.644-0.036-2.644s-1.757 1.043-3.867 2.321l-4.408 2.661-0.575 0.341-1.76-1.055c-5.019-2.887-6.449-3.76-7.877-4.637l3.495 1.999-2.673-1.613c-0.032-0.011-0.043 1.177-0.036 2.644z"></path>
+		</symbol>
+		</defs>
+		</svg>
+		<!-- <?php echo file_get_contents("assets/webfonts/googlescholar.svg"); ?> -->
+		<script type="text/javascript">
+		function getMail(user) {
+			site = 'med.uni-tuebingen.de';
+			html = document.write('<a href=\"mailto:' + user + '@' + site + '\"' + 'class=\"icon solid fa-envelope\" title=\"Email\"><span class=\"label\">Email</span>');
+			html += document.write('  <a href=\"mailto:' + user + '@' + site + '\">');
+			html += document.write(user + '@' + site + '</a>');
+			return html;
+		}
+		</script>
+		</head>
+		<body class="is-preload">
+
+			<!--<?php include 'assets/php/util.php' ?> -->
 
 		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+			<!-- <div id="page-wrapper"> -->
 
 				<!-- Header -->
 					<header id="header">
@@ -30,7 +51,8 @@
 											<li><a href="news.html">News</a></li>
 											<li><a href="people.html">People</a></li>
 											<li><a href="research.html">Research</a></li>
-											<li><a href="publications.html">Publications</a></li>
+											<li><a href="teaching.html">Teaching</a></li>
+											<li><a href="publications.php">Publications</a></li>
 										</ul>
 									</div>
 								</li>
@@ -47,79 +69,112 @@
 
 						<section class="wrapper style5">
 							<div class="inner">
+								<header>
+									<h3>PD Dr. Sergios Gatidis</h3>
+									<p style="margin: 0 0 1em 0"><span class="image left"><img src="images/gatidis.jpg" alt="" /></span>
+									<i> Group Leader </i></p>
+								</header>
+								<p style="margin: 0 0 6em 0">
+									University Hospital Tuebingen, MIDAS<br/>
+									<script>getMail('sergios.gatidis');</script>
+									<br/>
+									<i><a href="https://orcid.org/0000-0002-6928-4967" class="fab fa-orcid" style="border-bottom-color: transparent" title="ORCID"><span class="label"></span></a></i>
+									<i><a href="https://scholar.google.com/citations?user=7vCEi-gAAAAJ" class="icon"><svg class="icon icon-googlescholar" style="fill: currentColor; height: 18px; width: 25px; top: 2px; left: -2px"><use xlink:href="#icon-googlescholar"></use></svg><span class="label"></span></a></i>
 
-								<h3> PD Dr. Sergios Gatidis </h3>
-									<p><span class="image left"><img src="images/gatidis.jpg" alt="" /></span>
-									<i> Group Leader </i> <br>
-									<a href="https://www.medizin.uni-tuebingen.de/de/das-klinikum/mitarbeiter/profil/1479" 
-									   title="UKT">
-									    University Hospital Tuebingen </a> <br>
-									 consultant radiologist (Hybrid Imaging)<br> <br> <br>
-									</p>
+								</p>
 								<br>
-								
-								<h3> Dr. Thomas Kuestner </h3>
-									<p><span class="image left"><img src="images/kuestner.png" alt="" /></span>
-									<i> Postdoc</i> <br>
-										<a href="https://www.kcl.ac.uk/people/dr-thomas-kuestner"
-									   title="KK">
-									    King's College London, Department of Biomedical Engineering</a> <br>
-									University Hospital Tuebingen<br> 
-									<br> <br> <br>
-									</p>
+
+								<header>
+									<h3>Dr. Thomas Kuestner</h3>
+									<p style="margin: 0 0 1em 0"><span class="image left"><img src="images/kuestner.png" alt="" /></span>
+									<i> Group leader</i></p>
+								</header>
+								<p style="margin: 0 0 6em 0">
+									University Hospital Tuebingen, MIDAS &amp;<br/>
+									King's College London, Department of Biomedical Engineering<br/>
+									<script>getMail('thomas.kuestner');</script>
+									<br/>
+									<i><a href="https://orcid.org/0000-0002-0353-4898" class="fab fa-orcid" style="border-bottom-color: transparent" title="ORCID"><span class="label"></span></a></i>
+									<i><a href="https://scholar.google.com/citations?user=Oo6NZZcAAAAJ" class="icon"><svg class="icon icon-googlescholar" style="fill: currentColor; height: 18px; width: 25px; top: 2px; left: -2px"><use xlink:href="#icon-googlescholar"></use></svg><span class="label"></span></a></i>
+									<a href="https://github.com/thomaskuestner" class="icon brands fa-github" title="Github"><span class="label">Github</span></a>
+								</p>
 								<hr />
+							</p>
 
-
+							<header>
 								<h3> Karim Armanious, MSc </h3>
-									<p><span class="image left"><img src="images/armanious.jpg" alt="" /></span>
-									<i> PhD student </i> <br>
+									<p style="margin: 0 0 1em 0"><span class="image left"><img src="images/armanious.jpg" alt="" /></span>
+									<i> PhD student </i> </p>
+								</header>
+								<p style="margin: 0 0 6em 0">
+									University Hospital Tuebingen, MIDAS &amp;<br/>
 									<a href="https://www.iss.uni-stuttgart.de/institut/team/Armanious/"
 									   title="ISS">
-									    University of Stuttgart, Institute of Signal Processing and System Theory</a> <br>
-									University Hospital Tuebingen<br> 
-									<br> <br>  </p>
-								<br>
+									    University of Stuttgart, Institute of Signal Processing and System Theory</a> <br/>
+									<script>getMail('karim.armanious');</script>
+									<br/>
+								</p>
 
+								<header>
 								<h3> Marc Fischer, MSc </h3>
-									<p><span class="image left"><img src="images/pic04.jpg" alt="" /></span> 
-									<i> PhD student </i> <br>
+									<p style="margin: 0 0 1em 0"><span class="image left"><img src="images/pic04.jpg" alt="" /></span>
+									<i> PhD student </i> </p>
+								</header>
+								<p style="margin: 0 0 6em 0">
+									University Hospital Tuebingen, MIDAS &amp;<br/>
 									<a href="https://www.iss.uni-stuttgart.de/institut/team/Fischer-00057/"
 									   title="ISS">
-									    University of Stuttgart, Institute of Signal Processing and System Theory</a> <br>
-									<br>  <br>  <br> </p>
-								<br>
+									    University of Stuttgart, Institute of Signal Processing and System Theory</a> <br/>
+											<script>getMail('marc.fischer');</script>
+									<br/>
+								</p>
 
+							<header>
 								<h3> Annika Liebgott, MSc </h3>
-								<p><span class="image left"><img src="images/liebgott.jpg" alt="" /></span>
-								<i> PhD student </i> <br>
+								<p style="margin: 0 0 1em 0"><span class="image left"><img src="images/liebgott.jpg" alt="" /></span>
+								<i> PhD student </i> </p>
+							</header>
+							<p style="margin: 0 0 6em 0">
+								University Hospital Tuebingen, MIDAS &amp;<br/>
 								<a href="https://www.iss.uni-stuttgart.de/en/institute/team/Liebgott-00002/"
 									   title="ISS">
-									    University of Stuttgart, Institute of Signal Processing and System Theory </a> <br> <br>
-									<br>  <br> <br> </p>
+									    University of Stuttgart, Institute of Signal Processing and System Theory </a> <br/>
+											<script>getMail('annika.liebgott');</script>
+									<br/>
+								</p>
 
+							<header>
 								<h3> Dr. Tobias Hepp </h3>
-									<p><span class="image left"><img src="images/hepp.jpg" alt="" /></span>
-									<i> PhD student </i> <br>
-									Max Planck Institute for Intelligent Systems, Empirical Inference Department <br>
-									University Hospital Tuebingen <br>
+									<p style="margin: 0 0 1em 0"><span class="image left"><img src="images/hepp.jpg" alt="" /></span>
+									<i> PhD student </i> </p>
+								</header>
+								<p style="margin: 0 0 6em 0">
+									University Hospital Tuebingen, MIDAS &amp;<br/>
 									<a href="https://www.is.mpg.de/person/thepp"
-									   title="MPI-IS">MPI-IS</a>,
-										<b>  <a href="https://www.github.com/tobiashepp">github</a> </b> <a href="https://www.github.com/tobiashepp" class="icon brands fa-github"><span class="label">Github</span></a> <br>
-										<br> </p>
-								<br>
+									   title="MPI-IS">Max Planck Institute for Intelligent Systems, Empirical Inference Department</a> <br/>
+									<script>getMail('tobias.hepp');</script>
+									<br/>
+									<i><a href="https://orcid.org/0000-0002-5241-9642" class="fab fa-orcid" style="border-bottom-color: transparent" title="ORCID"><span class="label"></span></a></i>
+									<a href="https://github.com/tobiashepp" class="icon brands fa-github" title="Github"><span class="label">Github</span></a>
+									<br/>
+								</p>
 
+								<header>
 								<h3> Andreas Daul, Dipl-Phys </h3>
-									<p><span class="image left"><img src="images/daul.jpg" alt="" /></span>
-									<i> Infrastructure and project management </i> <br>
+									<p style="margin: 0 0 1em 0"><span class="image left"><img src="images/daul.jpg" alt="" /></span>
+									<i> Infrastructure and project management </i> </p>
+								</header>
+								<p style="margin: 0 0 6em 0">
 									University Hospital Tuebingen<br>
-									<br> <br>  </p>
-								<br>
+									<script>getMail('andreas.daul');</script>
+									<br/>
+								</p>
 
-
+								<br/>
 								<hr />
 
 								<h3> Bjarne Kerber </h3>
-								<p><span class="image left"><img src="images/pic04.jpg" alt="" /></span> 
+								<p><span class="image left"><img src="images/pic04.jpg" alt="" /></span>
 								<i> medical student </i> <br>
 								<br> <br> <br> <br> </p>
 
@@ -146,7 +201,7 @@
 						</ul>
 					</footer>
 
-			</div>
+		<!--	</div> -->
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

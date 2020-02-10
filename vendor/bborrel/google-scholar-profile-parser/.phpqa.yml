@@ -1,0 +1,18 @@
+phpcs:
+  standard:
+    - PSR1
+    - PSR12
+    - ObjectCalisthenics
+    - PHPCompatibility
+    - Security
+
+phpmd:
+  standard:
+    - cleancode
+    - codesize
+    - design
+    - naming
+    - unusedcode
+
+phpstan:
+  level: 7
