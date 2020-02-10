@@ -22,8 +22,7 @@
 		</svg>
 		<!-- <?php echo file_get_contents("assets/webfonts/googlescholar.svg"); ?> -->
 		<script type="text/javascript">
-		function getMail(user) {
-			site = 'med.uni-tuebingen.de';
+		function getMail(user, site) {
 			html = document.write('<a href=\"mailto:' + user + '@' + site + '\"' + 'class=\"icon solid fa-envelope\" title=\"Email\"><span class=\"label\">Email</span>');
 			html += document.write('  <a href=\"mailto:' + user + '@' + site + '\">');
 			html += document.write(user + '@' + site + '</a>');
@@ -76,7 +75,7 @@
 								</header>
 								<p style="margin: 0 0 6em 0">
 									University Hospital Tuebingen, MIDAS<br/>
-									<script>getMail('sergios.gatidis');</script>
+									<script>getMail('sergios.gatidis', 'med.uni-tuebingen.de');</script>
 									<br/>
 									<i><a href="https://orcid.org/0000-0002-6928-4967" class="fab fa-orcid" style="border-bottom-color: transparent" title="ORCID"><span class="label"></span></a></i>
 									<i><a href="https://scholar.google.com/citations?user=7vCEi-gAAAAJ" class="icon"><svg class="icon icon-googlescholar" style="fill: currentColor; height: 18px; width: 25px; top: 2px; left: -2px"><use xlink:href="#icon-googlescholar"></use></svg><span class="label"></span></a></i>
@@ -92,7 +91,7 @@
 								<p style="margin: 0 0 6em 0">
 									University Hospital Tuebingen, MIDAS &amp;<br/>
 									King's College London, Department of Biomedical Engineering<br/>
-									<script>getMail('thomas.kuestner');</script>
+									<script>getMail('thomas.kuestner', 'med.uni-tuebingen.de');</script>
 									<br/>
 									<i><a href="https://orcid.org/0000-0002-0353-4898" class="fab fa-orcid" style="border-bottom-color: transparent" title="ORCID"><span class="label"></span></a></i>
 									<i><a href="https://scholar.google.com/citations?user=Oo6NZZcAAAAJ" class="icon"><svg class="icon icon-googlescholar" style="fill: currentColor; height: 18px; width: 25px; top: 2px; left: -2px"><use xlink:href="#icon-googlescholar"></use></svg><span class="label"></span></a></i>
@@ -111,11 +110,25 @@
 									<a href="https://www.iss.uni-stuttgart.de/institut/team/Armanious/"
 									   title="ISS">
 									    University of Stuttgart, Institute of Signal Processing and System Theory</a> <br/>
-									<script>getMail('karim.armanious');</script>
+									<script>getMail('karim.armanious', 'iss.uni-stuttgart.de');</script>
 									<br/>
 								</p>
 
-								<header>
+							<header>
+								<h3> Dominik Blum, MSc </h3>
+									<p style="margin: 0 0 1em 0"><span class="image left"><img src="images/dominik.jpg" alt="" /></span>
+									<i> PhD student </i> </p>
+								</header>
+								<p style="margin: 0 0 6em 0">
+									University Hospital Tuebingen, MIDAS &amp;<br/>
+									<a href="https://www.medizin.uni-tuebingen.de/de/das-klinikum/mitarbeiter/profil/284"
+									   title="Nuk">
+										Institute for Nuclear Medicine and Molecular Imaging </a> <br/>
+									<script>getMail('dominik.blum', 'med.uni-tuebingen.de');</script>
+									<br/>
+								</p>
+
+							<header>
 								<h3> Marc Fischer, MSc </h3>
 									<p style="margin: 0 0 1em 0"><span class="image left"><img src="images/pic04.jpg" alt="" /></span>
 									<i> PhD student </i> </p>
@@ -124,8 +137,8 @@
 									University Hospital Tuebingen, MIDAS &amp;<br/>
 									<a href="https://www.iss.uni-stuttgart.de/institut/team/Fischer-00057/"
 									   title="ISS">
-									    University of Stuttgart, Institute of Signal Processing and System Theory</a> <br/>
-											<script>getMail('marc.fischer');</script>
+										University of Stuttgart, Institute of Signal Processing and System Theory</a> <br/>
+									<script>getMail('marc.fischer', 'iss.uni-stuttgart.de');</script>
 									<br/>
 								</p>
 
@@ -139,7 +152,7 @@
 								<a href="https://www.iss.uni-stuttgart.de/en/institute/team/Liebgott-00002/"
 									   title="ISS">
 									    University of Stuttgart, Institute of Signal Processing and System Theory </a> <br/>
-											<script>getMail('annika.liebgott');</script>
+											<script>getMail('annika.liebgott', 'iss.uni-stuttgart.de');</script>
 									<br/>
 								</p>
 
@@ -152,7 +165,7 @@
 									University Hospital Tuebingen, MIDAS &amp;<br/>
 									<a href="https://www.is.mpg.de/person/thepp"
 									   title="MPI-IS">Max Planck Institute for Intelligent Systems, Empirical Inference Department</a> <br/>
-									<script>getMail('tobias.hepp');</script>
+									<script>getMail('tobias.hepp', 'tuebingen.mpg.de');</script>
 									<br/>
 									<i><a href="https://orcid.org/0000-0002-5241-9642" class="fab fa-orcid" style="border-bottom-color: transparent" title="ORCID"><span class="label"></span></a></i>
 									<a href="https://github.com/tobiashepp" class="icon brands fa-github" title="Github"><span class="label">Github</span></a>
@@ -166,18 +179,19 @@
 								</header>
 								<p style="margin: 0 0 6em 0">
 									University Hospital Tuebingen<br>
-									<script>getMail('andreas.daul');</script>
+									<script>getMail('andreas.daul', 'med.uni-tuebingen.de');</script>
 									<br/>
 								</p>
 
 								<br/>
 								<hr />
 
+								<!-- Move students to teaching.
 								<h3> Bjarne Kerber </h3>
 								<p><span class="image left"><img src="images/pic04.jpg" alt="" /></span>
 								<i> medical student </i> <br>
 								<br> <br> <br> <br> </p>
-
+								//-->
 
 
 							</div>
