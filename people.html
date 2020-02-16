@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>People</title>
+		<title>MIDAS.LAB - About us</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -21,7 +21,7 @@
 		</defs>
 		</svg>
 		<!-- <?php echo file_get_contents("assets/webfonts/googlescholar.svg"); ?> -->
-		<script type="text/javascript">
+		<!--<script type="text/javascript">
 		function getMail(user, sitenr=1) {
 			if(sitenr==1)
 			{
@@ -34,7 +34,8 @@
 			html += document.write(user + '@' + site + '</a>');
 			return html;
 		}
-		</script>
+	</script>-->
+	<script type="text/javascript" src="assets/js/util_addon.js"></script>
 		</head>
 		<body class="is-preload">
 
@@ -196,7 +197,7 @@
 							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
 							//-->
 							<li><a href="https://www.github.com/lab-midas" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="mailto:info@midaslab.org" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><script>getMail('info', 'midaslab.org', ' class=\"icon solid fa-envelope\">');</script><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
 							<li>&copy; 2020 MIDAS.LAB </li><li>Design: <a href="https://html5up.net/">HTML5 UP</a></li><li><a href="privacy.html">Privacy/Imprint</a></li>

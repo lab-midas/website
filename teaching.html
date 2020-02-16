@@ -6,11 +6,12 @@
 -->
 <html>
 	<head>
-		<title>Elements - Spectral by HTML5 UP</title>
+		<title>MIDAS.LAB - Teaching</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script type="text/javascript" src="assets/js/util_addon.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -52,9 +53,101 @@
 								<section id="two" class="wrapper alt style2">
 
 					</section>
+						<h2>Available research thesis</h2>
+						Some of the topics are in collaboration with the <a href="https://www.iss.uni-stuttgart.de/lehre/index-00001.html">Institute of Signal Processing and System Theory, University of Stuttgart</a>
+						and the <a href="https://ei.is.tuebingen.mpg.de">Max Planck Institute for Intelligent Systems, Empirical Inference, Tübingen</a>.<br/>
 
-							student thesis in collaboration with ISS<br/>
-							information on possible thesis...TODO
+						<p style="margin: 0 0 1em 0">
+						<h3>AI-assisted data processing</h3>
+						<span class="image right"><img src="images/teaching/AIassisted_data.png" alt="" width=700/></span>
+						<img id="myImg" src="img_snow.jpg" alt="Snow" style="width:100%;max-width:300px">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+						The inclusion of artifical intelligence (AI) into medical data processing can help to improve performance by (but not limited to) increasing precision, boosting quality of service, easing processing and reducing computational times.
+						It enables to develop patient-centered workflows with personalized treatments that include: data processing from multiple imaging modalities acquired with multi-parametric imaging sequences, advanced reconstruction, post-processing and anylsis techniques.
+					  <br/>
+						In acquisition step:
+						<ul>
+							<li>sequence development for multi-parametric and motion-resolved MRI</li>
+							<li>patient-adaptive sampling mask optimization including online feedback according to movement cycle, SNR optimal sampling</li>
+							<li>monitor motion state by external sensors (Microsoft Kinect camera, respiratory belt, ...) to match them to a motion model</li>
+						</ul>
+						In reconstruction step:
+						<ul>
+						<li>reconstruct motion-resolved image: Deep-learning based Compressed Sensing reconstruction with included motion estimation</li>
+						<li>retrieve non-rigid deformations: Deep-learning based image registration or motion correction</li>
+						<li>map motion state to external surrogate signal (sensor fusion)</li>
+						<li>framework development for Gadgetron</li>
+					</ul>
+					In post-processing step:
+					<ul>
+						<li>convolutional neural networks for MR image artifact localization and quantification</li>
+						<li>Generative adversarial networks(GANs)for MR motion correction</li>
+						<li>Semantic segmentation of organs and tissues</li>
+						<li>Automatic quality control measures</li>
+						<li>Biomarker feature extraction</li>
+					</ul>
+					In analysis step:
+					<ul>
+						<li>Treatment response predicition
+						<li>Inclusion of non-imaging data
+						<li>Biological age estimation
+					</ul>
+
+					<h5>Motion correction</h5>
+
+					<h5>Image quality assessment and control</h5>
+					MRI is a flexible imaging modality, but can be prone to a variety of imaging artefacts which can be grouped as: patient-related, hardware/scanner-related and signal-processing-related. The artefacts can degrade the derived image quality and impair a reliable diagnosis. Patient, respiratory and cardiac movements produce motion artefacts which is one of the major extrinsic sources of artefacts. The work deals with accurately detecting and correcting artifacts to provide an objective and reliable quality control measure during acquisition and/or post-processing.
+
+					<h5>Semantic segmenation</h5>
+
+					<h5>Adversarial learning</h5>
+				</p>
+							<hr/>
+							<h2>Current and previous thesis</h2>
+							<h4>2020</h4>
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>Topic</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Clinical feasible pipeline for semantic MR segmentation</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 
 							</div>
 						</section>
@@ -70,7 +163,7 @@
 							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
 							//-->
 							<li><a href="https://www.github.com/lab-midas" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="mailto:info@midaslab.org" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><script>getMail('info', 'midaslab.org', ' class=\"icon solid fa-envelope\">');</script><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
 							<li>&copy; 2020 MIDAS.LAB </li><li>Design: <a href="https://html5up.net/">HTML5 UP</a></li><li><a href="privacy.html">Privacy/Imprint</a></li>

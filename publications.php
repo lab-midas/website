@@ -6,11 +6,12 @@
 -->
 <html>
 	<head>
-		<title>Generic - Spectral by HTML5 UP</title>
+		<title>MIDAS.LAB - Publications</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script type="text/javascript" src="assets/js/util_addon.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -130,7 +131,7 @@
 							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
 							//-->
 							<li><a href="https://www.github.com/lab-midas" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="mailto:info@midaslab.org" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><script>getMail('info', 'midaslab.org', ' class=\"icon solid fa-envelope\">');</script><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
 							<li>&copy; 2020 MIDAS.LAB </li><li>Design: <a href="https://html5up.net/">HTML5 UP</a></li><li><a href="privacy.html">Privacy/Imprint</a></li>
