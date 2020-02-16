@@ -55,19 +55,19 @@
 								<section id="two" class="wrapper alt style2">
 
 					</section>
-						<h2>Available research thesis</h2>
+						<h2>Available Bachelor/research/Master thesis</h2>
 						Some of the topics are in collaboration with the <a href="https://www.iss.uni-stuttgart.de/lehre/index-00001.html">Institute of Signal Processing and System Theory, University of Stuttgart</a>
 						and the <a href="https://ei.is.tuebingen.mpg.de">Max Planck Institute for Intelligent Systems, Empirical Inference, Tübingen</a>.<br/>
-
+						The following section gives an overview of the potential topics.
 						<p style="margin: 0 0 1em 0">
-						<h3>AI-assisted data processing</h3>
-						<span class="image right"><img id="myImg" src="images/teaching/AIassisted_data.png" alt="AI assisted data processing" style="width:100%;max-width:700px"/></span>
+						<h3>Overview: AI-assisted data processing</h3>
+						<span class="image right"><img class="myImg" id="myImg" src="images/teaching/AIassisted_data.png" alt="AI assisted data processing" style="width:100%;max-width:700px"/></span>
 
 						<!-- The Modal -->
 						<div id="myModal" class="modal">
-						  <span class="close">&times;</span>
+						  <span class="close" id="closeButton">&times;</span>
 						  <img class="modal-content" id="img01">
-						  <div id="caption"></div>
+						  <div class="captionModal" id="caption"></div>
 						</div>
 						<script>myModal();</script>
 						The inclusion of artifical intelligence (AI) into medical data processing can help to improve performance by (but not limited to) increasing precision, boosting quality of service, easing processing and reducing computational times.
@@ -93,22 +93,92 @@
 						<li>Semantic segmentation of organs and tissues</li>
 						<li>Automatic quality control measures</li>
 						<li>Biomarker feature extraction</li>
+						<li>Framework development for NORA browser</li>
 					</ul>
 					In analysis step:
 					<ul>
-						<li>Treatment response predicition
-						<li>Inclusion of non-imaging data
-						<li>Biological age estimation
+						<li>Treatment response predicition</li>
+						<li>Inclusion of non-imaging data</li>
+						<li>Biological age estimation</li>
 					</ul>
 
-					<h5>Motion correction</h5>
+					<h3 style="margin:2em 0 0 0">Proposed topics</h3>
+					<header style="margin:0.5em 0 1em 0">
+					<h4 style="margin:0 0 0 0">Motion correction</h4>
+					<i>Contact: <script>getMail('thomas.kuestner', 1);</script>;&nbsp;<script>getMail('karim.armanious', 1);</script></i>
+					</header>
+					<span class="image right"><img class="myImg" id="myImgMoCo" src="images/teaching/MoCo.png" alt="Intra- and inter-modality motion correction" style="width:100%;max-width:700px"/></span>
 
-					<h5>Image quality assessment and control</h5>
-					MRI is a flexible imaging modality, but can be prone to a variety of imaging artefacts which can be grouped as: patient-related, hardware/scanner-related and signal-processing-related. The artefacts can degrade the derived image quality and impair a reliable diagnosis. Patient, respiratory and cardiac movements produce motion artefacts which is one of the major extrinsic sources of artefacts. The work deals with accurately detecting and correcting artifacts to provide an objective and reliable quality control measure during acquisition and/or post-processing.
+					<!-- The Modal-->
+					<div id="myModalMoCo" class="modal">
+						<span class="close" id="closeButtonMoCo">&times;</span>
+						<img class="modal-content" id="imgMoCo">
+						<div class="captionModal" id="captionMoCo"></div>
+					</div>
+					<script>myModal("myModalMoCo", "myImgMoCo", "imgMoCo", "captionMoCo", "closeButtonMoCo");</script>
+					Patient, respiratory and cardiac movements produce motion artefacts in the final image which reduce the quality and impair reliable diagnosis.
+					The task is to accurately resolve, detect and correct the movements in acquisition, reconstruction and post-processing. High spatial-and temporal-resolved MR images need to beacquired over several respiratory and cardiac cycles under free movement conditions.
+					Motion-resolved images are then reconstructed under the consideration of a derived motion model and surrogate signals guiding the motion model. Motion models are estimated by image registrations. In a retrospective correction, images affected by motion can be further corrected.<br/>
+					Applied methods include: Deep-learning based reconstruction, optical-flow and deep-learning image registration, Generative adversarial networks, sensor fusion
 
-					<h5>Semantic segmenation</h5>
+					<header style="margin:2em 0 1em 0">
+					<h4 style="margin:0 0 0 0">Image quality assessment and control</h4>
+					<i>Contact: <script>getMail('thomas.kuestner', 1);</script>;&nbsp;<script>getMail('annika.liebgott', 2);</script></i>
+					</header>
+					MRI is a flexible imaging modality, but can be prone to a variety of imaging artefacts which can be grouped as: patient-related, hardware/scanner-related and signal-processing-related. The artefacts can degrade the derived image quality and impair a reliable diagnosis.
+					In order to provide a quantitative score, the human visual system needs to be mimicked which requires manual labeling by expert readers. Since expert labeling can be a time- and cost-intensive task, strategies for minimizing labeling effort need to be explored.
+					The work deals with accurately detecting and correcting artifacts to provide an objective and reliable quality control measure during acquisition and/or post-processing.<br/>
+					Applied methods include: feature extraction, classification, reinforcement learning, active learning, semi-supervised learning
 
-					<h5>Adversarial learning</h5>
+					<header style="margin:2em 0 1em 0">
+					<h4 style="margin:0 0 0 0">Semantic segmentation</h4>
+					<i>Contact: <script>getMail('marc.fischer', 1);</script>;&nbsp;<script>getMail('tobias.hepp', 1);</script></i>
+					</header>
+					<span class="image right"><img class="myImg" id="myImgSeg" src="images/teaching/Segmentation.png" alt="Segmentation of femora (Oberschenkelknochen), acetabulum (Hüftgelenkspfanne) and localization of landmarks (colored sphere)" style="width:100%;max-width:700px"/></span>
+
+					<!-- The Modal-->
+					<div id="myModalSeg" class="modal">
+						<span class="close" id="closeButtonSeg">&times;</span>
+						<img class="modal-content" id="imgSeg">
+						<div class="captionModal" id="captionSeg"></div>
+					</div>
+					<script>myModal("myModalSeg", "myImgSeg", "imgSeg", "captionSeg", "closeButtonSeg");</script>
+					Automatic segmentation of organs or tissue compartments in whole-body imaging is an important pre-requisite for any further analysis. The work deals with automatic detection of landmarks and segmentations for heart, abdominal organs (liver, spleen, pancreas, kidneys) and adiposse tissue compartments.
+					Different convolutional neural network architectures are investigated together with a smooth integration into clinical practice.
+					All thesis topics concern problem dependent aspects and appropriately selected algorithms:
+					<ul>
+					<li>Classification: Bone and organ segmentation, tissue classification</li>
+					<li>Regression: Anatomical structure localization</li>
+					<li>Statistical analysis: Texture and shape analysis of specific regions and structures</li>
+					<li>Extending and optimizing task dependent analysis pipelines</li>
+					<li>Framework development: GUI, extending functionalities in Python</li>
+					</ul>
+
+					<header style="margin:2em 0 1em 0">
+					<h4 style="margin:0 0 0 0">Adversarial learning</h4>
+					<i>Contact: <script>getMail('karim.armanious', 1);</script></i>
+					</header>
+					<span class="image right"><img class="myImg" id="myImgAdv" src="images/teaching/GenerativeModel.png" alt="Example of image-translation from PET to equivalent CT using GANs" style="width:100%;max-width:700px"/></span>
+
+					<!-- The Modal-->
+					<div id="myModalAdv" class="modal">
+						<span class="close" id="closeButtonAdv">&times;</span>
+						<img class="modal-content" id="imgAdv">
+						<div class="captionModal" id="captionAdv"></div>
+					</div>
+					<script>myModal("myModalAdv", "myImgAdv", "imgAdv", "captionAdv", "closeButtonAdv");</script>
+					The task of translating medical images between different domains has numerous useful applications. One example is the correction and restoration of artifact-corrupted images. Another potential application is the generation of novel image data between different modalities.
+					The work focuses on the development and refinement of medical image translation frameworks and their applications - specifically, GAN-based MR motion correction, GAN-based PET attenuation correction and GAN-based image inpainting.<br/>
+					Applied methods include: variational autoencoders, 3D GANs
+
+					<h3 style="margin: 2em 0 0 0">Prerequisites</h3>
+					<ul>
+					<li>Highly motivated, independent and structured way of working</li>
+					<li>Interest in machine learning, deep learning and signal processing</li>
+					<li>Studies in the field of electrical engineering, informatics or Medizintechnik</li>
+					<li>Good German and/or English skills (spoken and written)</li>
+					<li>Programming expertise in Python is beneficial</li>
+				</ul>
 				</p>
 							<hr/>
 							<h2>Current and previous thesis</h2>
@@ -117,11 +187,13 @@
 								<table>
 									<thead>
 										<tr>
+											<th>Type</th>
 											<th>Topic</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
+											<td>MA</td>
 											<td>Clinical feasible pipeline for semantic MR segmentation</td>
 										</tr>
 									</tbody>
