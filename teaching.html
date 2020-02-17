@@ -6,11 +6,15 @@
 -->
 <html>
 	<head>
-		<title>Elements - Spectral by HTML5 UP</title>
+		<title>MIDAS.LAB - Teaching</title>
+		<link rel="icon" href="images/favicon/favicon.ico">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets/css/modal.css" />
+		<script type="text/javascript" src="assets/js/util_addon.js"></script>
+		<script type="text/javascript" src="assets/js/modal.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -28,7 +32,7 @@
 										<ul>
 											<li><a href="index.html">Home</a></li>
 											<li><a href="news.html">News</a></li>
-											<li><a href="people.html">People</a></li>
+											<li><a href="people.html">About us</a></li>
 											<li><a href="research.html">Research</a></li>
 											<li><a href="teaching.html">Teaching</a></li>
 											<li><a href="publications.php">Publications</a></li>
@@ -52,9 +56,151 @@
 								<section id="two" class="wrapper alt style2">
 
 					</section>
+						<h2>Available Bachelor/research/Master thesis</h2>
+						Some of the topics are in collaboration with the <a href="https://www.iss.uni-stuttgart.de/lehre/index-00001.html">Institute of Signal Processing and System Theory, University of Stuttgart</a>
+						and the <a href="https://ei.is.tuebingen.mpg.de">Max Planck Institute for Intelligent Systems, Empirical Inference, Tübingen</a>.<br/>
+						The following section gives an overview of the potential topics.
+						<p style="margin: 0 0 1em 0">
+						<h3>Overview: AI-assisted data processing</h3>
+						<span class="image right"><img class="myImg" id="myImg" src="images/teaching/AIassisted_data.png" alt="AI assisted data processing" style="width:100%;max-width:700px"/></span>
 
-							student thesis in collaboration with ISS<br/>
-							information on possible thesis...TODO
+						<!-- The Modal -->
+						<div id="myModal" class="modal">
+						  <span class="modal-close" id="closeButton">&times;</span>
+						  <img class="modal-content" id="img01">
+						  <div class="captionModal" id="caption"></div>
+						</div>
+						<script>myModal();</script>
+						The inclusion of artifical intelligence (AI) into medical data processing can help to improve performance by (but not limited to) increasing precision, boosting quality of service, easing processing and reducing computational times.
+						It enables to develop patient-centered workflows with personalized treatments that include: data processing from multiple imaging modalities acquired with multi-parametric imaging sequences, advanced reconstruction, post-processing and anylsis techniques.
+					  <br/>
+						In acquisition step:
+						<ul>
+							<li>sequence development for multi-parametric and motion-resolved MRI</li>
+							<li>patient-adaptive sampling mask optimization including online feedback according to movement cycle, SNR optimal sampling</li>
+							<li>monitor motion state by external sensors (Microsoft Kinect camera, respiratory belt, ...) to match them to a motion model</li>
+						</ul>
+						In reconstruction step:
+						<ul>
+						<li>reconstruct motion-resolved image: Deep-learning based Compressed Sensing reconstruction with included motion estimation</li>
+						<li>retrieve non-rigid deformations: Deep-learning based image registration or motion correction</li>
+						<li>map motion state to external surrogate signal (sensor fusion)</li>
+						<li>framework development for Gadgetron</li>
+					</ul>
+					In post-processing step:
+					<ul>
+						<li>convolutional neural networks for MR image artifact localization and quantification</li>
+						<li>Generative adversarial networks(GANs)for MR motion correction</li>
+						<li>Semantic segmentation of organs and tissues</li>
+						<li>Automatic quality control measures</li>
+						<li>Biomarker feature extraction</li>
+						<li>Framework development for NORA browser</li>
+					</ul>
+					In analysis step:
+					<ul>
+						<li>Treatment response predicition</li>
+						<li>Inclusion of non-imaging data</li>
+						<li>Biological age estimation</li>
+					</ul>
+
+					<h3 style="margin:2em 0 0 0">Proposed topics</h3>
+					The proposed topics here are a selection of the current research projects. If you are interested in any other topic, please contact one of the <a href="people.html">employees</a>.
+					<header style="margin:0.5em 0 1em 0">
+					<h4 style="margin:1em 0 0 0">Motion correction</h4>
+					<i>Contact: <script>getMail('thomas.kuestner', 1);</script>;&nbsp;<script>getMail('karim.armanious', 1);</script></i>
+					</header>
+					<span class="image right"><img class="myImg" id="myImgMoCo" src="images/teaching/MoCo.png" alt="Intra- and inter-modality motion correction" style="width:100%;max-width:700px"/></span>
+
+					<!-- The Modal-->
+					<div id="myModalMoCo" class="modal">
+						<span class="modal-close" id="closeButtonMoCo">&times;</span>
+						<img class="modal-content" id="imgMoCo">
+						<div class="captionModal" id="captionMoCo"></div>
+					</div>
+					<script>myModal("myModalMoCo", "myImgMoCo", "imgMoCo", "captionMoCo", "closeButtonMoCo");</script>
+					Patient, respiratory and cardiac movements produce motion artefacts in the final image which reduce the quality and impair reliable diagnosis.
+					The task is to accurately resolve, detect and correct the movements in acquisition, reconstruction and post-processing. High spatial-and temporal-resolved MR images need to beacquired over several respiratory and cardiac cycles under free movement conditions.
+					Motion-resolved images are then reconstructed under the consideration of a derived motion model and surrogate signals guiding the motion model. Motion models are estimated by image registrations. In a retrospective correction, images affected by motion can be further corrected.<br/>
+					Applied methods include: Deep-learning based reconstruction, optical-flow and deep-learning image registration, Generative adversarial networks, sensor fusion
+
+					<header style="margin:2em 0 1em 0">
+					<h4 style="margin:0 0 0 0">Image quality assessment and control</h4>
+					<i>Contact: <script>getMail('thomas.kuestner', 1);</script>;&nbsp;<script>getMail('annika.liebgott', 2);</script></i>
+					</header>
+					MRI is a flexible imaging modality, but can be prone to a variety of imaging artefacts which can be grouped as: patient-related, hardware/scanner-related and signal-processing-related. The artefacts can degrade the derived image quality and impair a reliable diagnosis.
+					In order to provide a quantitative score, the human visual system needs to be mimicked which requires manual labeling by expert readers. Since expert labeling can be a time- and cost-intensive task, strategies for minimizing labeling effort need to be explored.
+					The work deals with accurately detecting and correcting artifacts to provide an objective and reliable quality control measure during acquisition and/or post-processing.<br/>
+					Applied methods include: feature extraction, classification, reinforcement learning, active learning, semi-supervised learning
+
+					<header style="margin:2em 0 1em 0">
+					<h4 style="margin:0 0 0 0">Semantic segmentation</h4>
+					<i>Contact: <script>getMail('marc.fischer', 1);</script>;&nbsp;<script>getMail('tobias.hepp', 1);</script></i>
+					</header>
+					<span class="image right"><img class="myImg" id="myImgSeg" src="images/teaching/Segmentation.png" alt="Segmentation of femora (Oberschenkelknochen), acetabulum (Hüftgelenkspfanne) and localization of landmarks (colored sphere)" style="width:100%;max-width:700px"/></span>
+
+					<!-- The Modal-->
+					<div id="myModalSeg" class="modal">
+						<span class="modal-close" id="closeButtonSeg">&times;</span>
+						<img class="modal-content" id="imgSeg">
+						<div class="captionModal" id="captionSeg"></div>
+					</div>
+					<script>myModal("myModalSeg", "myImgSeg", "imgSeg", "captionSeg", "closeButtonSeg");</script>
+					Automatic segmentation of organs or tissue compartments in whole-body imaging is an important pre-requisite for any further analysis. The work deals with automatic detection of landmarks and segmentations for heart, abdominal organs (liver, spleen, pancreas, kidneys) and adiposse tissue compartments.
+					Different convolutional neural network architectures are investigated together with a smooth integration into clinical practice.
+					All thesis topics concern problem dependent aspects and appropriately selected algorithms:
+					<ul>
+					<li>Classification: Bone and organ segmentation, tissue classification</li>
+					<li>Regression: Anatomical structure localization</li>
+					<li>Statistical analysis: Texture and shape analysis of specific regions and structures</li>
+					<li>Extending and optimizing task dependent analysis pipelines</li>
+					<li>Framework development: GUI, extending functionalities in Python</li>
+					</ul>
+
+					<header style="margin:2em 0 1em 0">
+					<h4 style="margin:0 0 0 0">Adversarial learning</h4>
+					<i>Contact: <script>getMail('karim.armanious', 1);</script></i>
+					</header>
+					<span class="image right"><img class="myImg" id="myImgAdv" src="images/teaching/GenerativeModel.png" alt="Example of image-translation from PET to equivalent CT using GANs" style="width:100%;max-width:700px"/></span>
+
+					<!-- The Modal-->
+					<div id="myModalAdv" class="modal">
+						<span class="modal-close" id="closeButtonAdv">&times;</span>
+						<img class="modal-content" id="imgAdv">
+						<div class="captionModal" id="captionAdv"></div>
+					</div>
+					<script>myModal("myModalAdv", "myImgAdv", "imgAdv", "captionAdv", "closeButtonAdv");</script>
+					The task of translating medical images between different domains has numerous useful applications. One example is the correction and restoration of artifact-corrupted images. Another potential application is the generation of novel image data between different modalities.
+					The work focuses on the development and refinement of medical image translation frameworks and their applications - specifically, GAN-based MR motion correction, GAN-based PET attenuation correction and GAN-based image inpainting.<br/>
+					Applied methods include: variational autoencoders, 3D GANs
+
+					<h3 style="margin: 2em 0 0 0">Prerequisites</h3>
+					<ul>
+					<li>Highly motivated, independent and structured way of working</li>
+					<li>Interest in machine learning, deep learning and signal processing</li>
+					<li>Studies in the field of electrical engineering, informatics or Medizintechnik</li>
+					<li>Good German and/or English skills (spoken and written)</li>
+					<li>Programming expertise in Python is beneficial</li>
+				</ul>
+				</p>
+							<hr/>
+							<h2>Current and previous thesis</h2>
+							<h4>2020</h4>
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>Type</th>
+											<th>Topic</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>MA</td>
+											<td>Clinical feasible pipeline for semantic MR segmentation</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 
 							</div>
 						</section>
@@ -63,14 +209,14 @@
 				<!-- Footer -->
 				<footer id="footer">
 						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://twitter.com/lab_midas" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 							<!--
 							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
 							//-->
 							<li><a href="https://www.github.com/lab-midas" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><script>getMail('info', 'midaslab.org', ' class=\"icon solid fa-envelope\">');</script><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
 							<li>&copy; 2020 MIDAS.LAB </li><li>Design: <a href="https://html5up.net/">HTML5 UP</a></li><li><a href="privacy.html">Privacy/Imprint</a></li>

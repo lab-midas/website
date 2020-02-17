@@ -6,11 +6,13 @@
 -->
 <html>
 	<head>
-		<title>Elements - Spectral by HTML5 UP</title>
+		<title>MIDAS.LAB - Research</title>
+		<link rel="icon" href="images/favicon/favicon.ico">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script type="text/javascript" src="assets/js/util_addon.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -28,7 +30,7 @@
 										<ul>
 											<li><a href="index.html">Home</a></li>
 											<li><a href="news.html">News</a></li>
-											<li><a href="people.html">People</a></li>
+											<li><a href="people.html">About us</a></li>
 											<li><a href="research.html">Research</a></li>
 											<li><a href="teaching.html">Teaching</a></li>
 											<li><a href="publications.php">Publications</a></li>
@@ -53,14 +55,51 @@
 
 					</section>
 								<section>
-									<p><span class="image left"><img src="images/MIDAS.svg" alt="" /></span>
+									<p><span class="image left"><img src="images/MIDAS_full.svg" height="300" alt="" /></span>
 									<!-- <h3>Research</h3> -->
 									Our aim is to advance methods and applications for processing and analysis of medical imaging data using machine learning methods. <br/><br/>
-									Specifically, we are working on the analysis of multiparametric PET/MRI and PET/CT data aiming for functional characterization of tissues and tumors in vivo.
-									Our second focus is the development and implementation of methods for image quality assessment, image enhancement and automated image analysis in epidemiological MRI studies.
+									Specifically, we are working on the analysis of multi-parametric PET/MRI and PET/CT data aiming for functional characterization of tissues and tumors in vivo.
+									Our second focus is the development and implementation of a patient-centered workflow including novel imaging sequences, reconstruction techniques, image registration methods and methods for image quality assessment, image enhancement and automated image analysis in epidemiological MRI studies.
+									The third focus is to provide explainable and human-interpretable methods which enable the integration of machine learning applications into clinical practice.
 									</p>
 								</section>
+								<hr/>
+								<p style="margin: 0 0 5em 0">
+								<h2>Current projects</h2>
+								<p>
+								<h3>Patient-centered workflow</h3>
+								In order to provide a personalized treatment, automatic identification of a patient's phenotyp and biological age is required. Based on this information, the most suitable imaging protocol can be selected.
+								Suggestion systems thereby include image-derived features and non-imaging information (initial finding, anamnesis, genetics, laboratory tests). In order to guarantee a reliable image quality, data quality control measures (see automatic medical image quality assessment) are included.
+								Derived predictions can assist in an age-related diagnosis, adpatation of sequence protocols, guided therapy monitoring, treatment response prediction, biomarker identification etc.
+								</p>
 
+								<p>
+								<h3>Artificial Intelligence based data processing</h3>
+								The application of artificial intelligence (AI) methods in acquisition, reconstruction, post-processing or analysis are investigated. The aim is to provide reliable, robust, specific and sensitive methods.
+								The inclusion of AI into medical data processing can help to improve performance by (but not limited to) increasing precision, boosting quality of service, easing processing and reducing computational times.
+								In the case of e.g. MR motion artifacts: Based on the obtained quality measure in the acquisition, respective artefact-correcting/aware reconstruction and post-processing methods are selected and combined. The acquisition can be steered by an adaptive MR subsampling connected to a network composed of DL-based CS reconstruction for multi-parametric imaging, incorporated motion detection and correction and an organ-specific segmentation with quality assurance.
+								</p>
+
+								<p>
+								<h3>Automated medical image quality assessment</h3>
+								Assessment of image quality is a prerequisite for further processing in most clinical situations and scientific analysis. In certain situations, when image quality has to be assessed in a short time interval or when data are analyzed by automated methods, image quality assessment has to be performed automatically. To this end, we develop machine learning based methods for identification, localization and quantification of image artifacts in medical images, specifically in whole body MRI.</p>
+
+								<p>
+								<h3>Image Segmentation</h3>
+								In the context of large epidemiological studies, manual image analysis is often not feasible due to the overwhelming amount of data. Thus, automated analyses of whole body data is necessary. In order to perform automated analyses, a prerequisite is often the segmentation of target tissues and organs. A major aspect of our work is thus the adaptation and implementation of automated whole body segmentation in the context of large clinical and epidemiological studies using deep-learning approaches.</p>
+
+								<p>
+								<h3>Medical image translation with Generative Adversarial Networks</h3>
+								The task of translating medical images between different domains has numerous useful applications. One example is the correction and restoration of artifact-corrupted images. Another potential application is the generation of novel image data. We are working on the development and refinement of medical image translation frameworks and their applications. Specifically, we are currently adressing GAN-based motion correction, GAN-based PET attenuation correction and GAN-based image inpainting.</p>
+
+								<p>
+								<h3>Explainable artificial intelligence</h3>
+								In order to understand and explain how a machine learning method makes its prediction, a visual correlation of the features to the medical images is required. Following the understanding of how an architecture makes its prediction, one wants to understand why it works in a certain way: certain combination of processing steps and data (from single or multiple imaging modalities, single or multi-parametric imaging data, non-imaging data), under the influence of artefacts, etc. We are studying these relationships by causal inferences to answer these questions and to derive optimized operations and workflows.
+								</p>
+
+
+
+							</p>
 							</div>
 						</section>
 					</article>
@@ -68,14 +107,14 @@
 				<!-- Footer -->
 				<footer id="footer">
 						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://twitter.com/lab_midas" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 							<!--
 							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
 							//-->
 							<li><a href="https://www.github.com/lab-midas" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><script>getMail('info', 'midaslab.org', ' class=\"icon solid fa-envelope\">');</script><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
 							<li>&copy; 2020 MIDAS.LAB </li><li>Design: <a href="https://html5up.net/">HTML5 UP</a></li><li><a href="privacy.html">Privacy/Imprint</a></li>

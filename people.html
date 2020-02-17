@@ -6,7 +6,8 @@
 -->
 <html>
 	<head>
-		<title>People</title>
+		<title>MIDAS.LAB - About us</title>
+		<link rel="icon" href="images/favicon/favicon.ico">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -21,14 +22,22 @@
 		</defs>
 		</svg>
 		<!-- <?php echo file_get_contents("assets/webfonts/googlescholar.svg"); ?> -->
-		<script type="text/javascript">
-		function getMail(user, site) {
+		<!--<script type="text/javascript">
+		function getMail(user, sitenr=1) {
+			if(sitenr==1)
+			{
+				site = 'med.uni-tuebingen.de';
+			} else if (sitenr == 2) {
+				site = 'iss.uni-stuttgart.de'
+			}
+
 			html = document.write('<a href=\"mailto:' + user + '@' + site + '\"' + 'class=\"icon solid fa-envelope\" title=\"Email\"><span class=\"label\">Email</span>');
 			html += document.write('  <a href=\"mailto:' + user + '@' + site + '\">');
 			html += document.write(user + '@' + site + '</a>');
 			return html;
 		}
-		</script>
+	</script>-->
+	<script type="text/javascript" src="assets/js/util_addon.js"></script>
 		</head>
 		<body class="is-preload">
 
@@ -48,7 +57,7 @@
 										<ul>
 											<li><a href="index.html">Home</a></li>
 											<li><a href="news.html">News</a></li>
-											<li><a href="people.html">People</a></li>
+											<li><a href="people.html">About us</a></li>
 											<li><a href="research.html">Research</a></li>
 											<li><a href="teaching.html">Teaching</a></li>
 											<li><a href="publications.php">Publications</a></li>
@@ -62,21 +71,26 @@
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>People</h2>
-							<p>members of the midas.lab</p>
+							<h2>About us</h2>
+							<p>the MIDAS.lab</p>
 						</header>
 
 						<section class="wrapper style5">
 							<div class="inner">
+							<h2>Lab</h2>
+							The lab is situated in the Department of Interventional and Diagnostic Radiology in the University Hospital of Tübingen, Germany.
+							<span class="image left"><img src="images/MIDAS_full.svg" alt="" height="400"/></span>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.18113444273!2d9.035997015003385!3d48.52976033174419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799e4cdfec11107%3A0x7ba23b725f9d24b9!2sHoppe-Seyler-Stra%C3%9Fe%203%2C%2072076%20T%C3%BCbingen%2C%20Deutschland!5e0!3m2!1sde!2suk!4v1581589870824!5m2!1sde!2suk" width="600" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+							<hr/>
+							<h2>People</h2>
 								<header>
 									<h3>PD Dr. Sergios Gatidis</h3>
 									<p style="margin: 0 0 1em 0"><span class="image left"><img src="images/gatidis.jpg" alt="" /></span>
-									<i> Group Leader </i></p>
+									<i> Group leader </i></p>
 								</header>
 								<p style="margin: 0 0 6em 0">
 									University Hospital Tuebingen, MIDAS<br/>
-									<script>getMail('sergios.gatidis', 'med.uni-tuebingen.de');</script>
-									<br/>
+									<script>getMail('sergios.gatidis');</script><br/>
 									<i><a href="https://orcid.org/0000-0002-6928-4967" class="fab fa-orcid" style="border-bottom-color: transparent" title="ORCID"><span class="label"></span></a></i>
 									<i><a href="https://scholar.google.com/citations?user=7vCEi-gAAAAJ" class="icon"><svg class="icon icon-googlescholar" style="fill: currentColor; height: 18px; width: 25px; top: 2px; left: -2px"><use xlink:href="#icon-googlescholar"></use></svg><span class="label"></span></a></i>
 
@@ -165,10 +179,25 @@
 									University Hospital Tuebingen, MIDAS &amp;<br/>
 									<a href="https://www.is.mpg.de/person/thepp"
 									   title="MPI-IS">Max Planck Institute for Intelligent Systems, Empirical Inference Department</a> <br/>
-									<script>getMail('tobias.hepp', 'tuebingen.mpg.de');</script>
+									<script>getMail('tobias.hepp','tuebingen.mpg.de');</script>
+
 									<br/>
 									<i><a href="https://orcid.org/0000-0002-5241-9642" class="fab fa-orcid" style="border-bottom-color: transparent" title="ORCID"><span class="label"></span></a></i>
 									<a href="https://github.com/tobiashepp" class="icon brands fa-github" title="Github"><span class="label">Github</span></a>
+									<br/>
+								</p>
+
+								<header>
+								<h3> Dominik Blum, MSc </h3>
+									<p style="margin: 0 0 1em 0"><span class="image left"><img src="images/dominik.jpg" alt="" /></span>
+									<i> PhD student </i> </p>
+								</header>
+								<p style="margin: 0 0 6em 0">
+									University Hospital Tuebingen, MIDAS &amp;<br/>
+									<a href="https://www.medizin.uni-tuebingen.de/de/das-klinikum/mitarbeiter/profil/284"
+									   title="Nuk">
+										Institute for Nuclear Medicine and Molecular Imaging </a> <br/>
+									<script>getMail('dominik.blum', 'med.uni-tuebingen.de');</script>
 									<br/>
 								</p>
 
@@ -184,15 +213,6 @@
 								</p>
 
 								<br/>
-								<hr />
-
-								<!-- Move students to teaching.
-								<h3> Bjarne Kerber </h3>
-								<p><span class="image left"><img src="images/pic04.jpg" alt="" /></span>
-								<i> medical student </i> <br>
-								<br> <br> <br> <br> </p>
-								//-->
-
 
 							</div>
 						</section>
@@ -201,14 +221,14 @@
 				<!-- Footer -->
 				<footer id="footer">
 						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://twitter.com/lab_midas" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 							<!--
 							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
 							//-->
 							<li><a href="https://www.github.com/lab-midas" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><script>getMail('info', 'midaslab.org', ' class=\"icon solid fa-envelope\">');</script><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
 							<li>&copy; 2020 MIDAS.LAB </li><li>Design: <a href="https://html5up.net/">HTML5 UP</a></li><li><a href="privacy.html">Privacy/Imprint</a></li>
