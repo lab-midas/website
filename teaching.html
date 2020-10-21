@@ -76,21 +76,21 @@
 					  <br/>
 						In acquisition step:
 						<ul>
-							<li>sequence development for multi-parametric and motion-resolved MRI</li>
-							<li>patient-adaptive sampling mask optimization including online feedback according to movement cycle, SNR optimal sampling</li>
-							<li>monitor motion state by external sensors (Microsoft Kinect camera, respiratory belt, ...) to match them to a motion model</li>
+							<li>Sequence development for multi-parametric and motion-resolved MRI</li>
+							<li>Patient-adaptive sampling optimization including online feedback according to movement cycle, SNR, parametric information</li>
+							<li>Monitor imaging state by external sensors (Microsoft Kinect camera, respiratory belt, ...) to match e.g. to a motion model</li>
 						</ul>
 						In reconstruction step:
 						<ul>
-						<li>reconstruct motion-resolved image: Deep-learning based Compressed Sensing reconstruction with included motion estimation</li>
-						<li>retrieve non-rigid deformations: Deep-learning based image registration or motion correction</li>
-						<li>map motion state to external surrogate signal (sensor fusion)</li>
-						<li>framework development for Gadgetron</li>
+						<li>Conventional and deep-learning based image reconstruction: Inclusion of multi-parametric and motion information, high-dimensional data processing</li>
+						<li>Non-rigid motion estimation and correction: Deep-learning based image registration and motion correction</li>
+						<li>Sensor fusion to map imaging states to external surrogate signals</li>
+						<li>Framework development for Gadgetron</li>
 					</ul>
 					In post-processing step:
 					<ul>
-						<li>convolutional neural networks for MR image artifact localization and quantification</li>
-						<li>Generative adversarial networks(GANs)for MR motion correction</li>
+						<li>Convolutional neural networks for MR image artifact localization and quantification</li>
+						<li>Generative adversarial networks (GANs) for MR motion correction</li>
 						<li>Semantic segmentation of organs and tissues</li>
 						<li>Automatic quality control measures</li>
 						<li>Biomarker feature extraction</li>
@@ -99,7 +99,8 @@
 					In analysis step:
 					<ul>
 						<li>Treatment response predicition</li>
-						<li>Inclusion of non-imaging data</li>
+						<li>Combination of imaging and non-imaging data</li>
+						<li>GANs for image synthesis</li>
 						<li>Biological age estimation</li>
 					</ul>
 
@@ -109,7 +110,7 @@
 					<h4 style="margin:1em 0 0 0">Motion correction</h4>
 					<i>Contact: <script>getMail('thomas.kuestner', 1);</script>;&nbsp;<script>getMail('karim.armanious', 1);</script></i>
 					</header>
-					<span class="image right"><img class="myImg" id="myImgMoCo" src="images/teaching/MoCo.png" alt="Intra- and inter-modality motion correction" style="width:100%;max-width:700px"/></span>
+					<span class="image right"><img class="myImg" id="myImgMoCo" src="images/teaching/MoCo.png" alt="Intra- and inter-modality motion detection and correction" style="width:100%;max-width:700px"/></span>
 
 					<!-- The Modal-->
 					<div id="myModalMoCo" class="modal">
@@ -123,11 +124,30 @@
 					Motion-resolved images are then reconstructed under the consideration of a derived motion model and surrogate signals guiding the motion model. Motion models are estimated by image registrations. In a retrospective correction, images affected by motion can be further corrected.<br/>
 					Applied methods include: Deep-learning based reconstruction, optical-flow and deep-learning image registration, Generative adversarial networks, sensor fusion
 
+					<header style="margin:0.5em 0 1em 0">
+					<h4 style="margin:1em 0 0 0">Image reconstruction</h4>
+					<i>Contact: <script>getMail('thomas.kuestner', 1);</script>;&nbsp;<script>getMail('patrick.putzky', 'tuebingen.mpg.de');</script></i>
+					</header>
+					<span class="image right"><img class="myImg" id="myImgRecon" src="images/teaching/Recon.png" alt="Image reconstruction from sub-Nyquist sampled MR raw data" style="width:100%;max-width:700px"/></span>
+
+					<!-- The Modal-->
+					<div id="myModalRecon" class="modal">
+						<span class="modal-close" id="closeButtonRecon">&times;</span>
+						<img class="modal-content" id="imgRecon">
+						<div class="captionModal" id="captionRecon"></div>
+					</div>
+					<script>myModal("myModalRecon", "myImgRecon", "imgRecon", "captionRecon", "closeButtonRecon");</script>
+					Magnetic resonance (MR) imaging plays an important role in medical diagnostic imaging due to its high soft-tissue contrast and its non-invasive acquisition. One major drawback, however, is often the relatively long examination time. Therefore, acceleration of MR data acquisition
+					is of great interest. One way to achieve this is to reduce the number of phase-encoding steps for a fixed resolution in Cartesian raw data acquisition. The resulting sub-Nyquist acceleration introduces aliasing artifacts in the image. Aliasing-free images can be recovered if
+					(1) the images are compressible, i.e. can be sparsely represented in some transform domain, if (2) are randomly and incoherently sampled and if (3) a non-linear reconstruction is employed. Further consideration need to be taken for sharing of spatio-temporal-quantiative information and
+					to handle the high-dimensional data processing efficiently.<br/>
+					Applied methods include: Compressed Sensing, deep-learning based image reconstruction, low-rank + sparse methods
+
 					<header style="margin:2em 0 1em 0">
 					<h4 style="margin:0 0 0 0">Image quality assessment and control</h4>
 					<i>Contact: <script>getMail('thomas.kuestner', 1);</script>;&nbsp;<script>getMail('annika.liebgott', 2);</script></i>
 					</header>
-					MRI is a flexible imaging modality, but can be prone to a variety of imaging artefacts which can be grouped as: patient-related, hardware/scanner-related and signal-processing-related. The artefacts can degrade the derived image quality and impair a reliable diagnosis.
+					Magnetic resonance imaging is a flexible imaging modality, but can be prone to a variety of imaging artefacts which can be grouped as: patient-related, hardware/scanner-related and signal-processing-related. The artefacts can degrade the derived image quality and impair a reliable diagnosis.
 					In order to provide a quantitative score, the human visual system needs to be mimicked which requires manual labeling by expert readers. Since expert labeling can be a time- and cost-intensive task, strategies for minimizing labeling effort need to be explored.
 					The work deals with accurately detecting and correcting artifacts to provide an objective and reliable quality control measure during acquisition and/or post-processing.<br/>
 					Applied methods include: feature extraction, classification, reinforcement learning, active learning, semi-supervised learning
