@@ -109,7 +109,7 @@
 					The proposed topics here are a selection of the current research projects. If you are interested in any other topic, please refer to <a href="https://www.github.com/lab-midas">the Github projects</a> or <a href="https://sites.google.com/site/kspaceastronauts/home">software and code documentation</a> and contact one of the <a href="people.html">employees</a> directly.
 					<header style="margin:0.5em 0 1em 0">
 					<h4 style="margin:1em 0 0 0">Motion correction</h4>
-					<i>Contact: <script>getMail('thomas.kuestner', 1);</script>;&nbsp;<script>getMail('karim.armanious', 1);</script></i>
+					<i>Contact: <script>getMail('thomas.kuestner', 1);</script>;&nbsp;<script>getMail('marcel.frueh', 1);</script></i>
 					</header>
 					<span class="image right"><img class="myImg" id="myImgMoCo" src="images/teaching/MoCo.png" alt="Intra- and inter-modality motion detection and correction" style="width:100%;max-width:700px"/></span>
 
@@ -122,8 +122,15 @@
 					<script>myModal("myModalMoCo", "myImgMoCo", "imgMoCo", "captionMoCo", "closeButtonMoCo");</script>
 					Patient, respiratory and cardiac movements produce motion artefacts in the final image which reduce the quality and impair reliable diagnosis.
 					The task is to accurately resolve, detect and correct the movements in acquisition, reconstruction and post-processing. High spatial-and temporal-resolved MR images need to beacquired over several respiratory and cardiac cycles under free movement conditions.
-					Motion-resolved images are then reconstructed under the consideration of a derived motion model and surrogate signals guiding the motion model. Motion models are estimated by image registrations. In a retrospective correction, images affected by motion can be further corrected.<br/>
-					Applied methods include: Deep-learning based reconstruction, optical-flow and deep-learning image registration, Generative adversarial networks, sensor fusion
+					Motion-resolved images are then reconstructed under the consideration of a derived motion model and surrogate signals guiding the motion model. Motion models are estimated by image registrations (conventional and deep learning) and self-supervised random walks. Motion correction can also be paired with image reconstruction.<br/>
+					<br/>
+					<ul>
+					<li> deep-learning based reconstruction </li>
+					<li> random walks </li>
+					<li> optical-flow and deep-learning image registration </li>
+					<li> generative adversarial networks </li>
+					<li> sensor fusion </li>
+				</ul>
 
 					<header style="margin:0.5em 0 1em 0">
 					<h4 style="margin:1em 0 0 0">Image reconstruction</h4>
@@ -141,21 +148,34 @@
 					Magnetic resonance (MR) imaging plays an important role in medical diagnostic imaging due to its high soft-tissue contrast and its non-invasive acquisition. One major drawback, however, is often the relatively long examination time. Therefore, acceleration of MR data acquisition
 					is of great interest. One way to achieve this is to reduce the number of phase-encoding steps for a fixed resolution in Cartesian raw data acquisition. The resulting sub-Nyquist acceleration introduces aliasing artifacts in the image. Aliasing-free images can be recovered if
 					(1) the images are compressible, i.e. can be sparsely represented in some transform domain, if (2) are randomly and incoherently sampled and if (3) a non-linear reconstruction is employed. Further consideration need to be taken for sharing of spatio-temporal-quantiative information and
-					to handle the high-dimensional data processing efficiently.<br/>
-					Applied methods include: Compressed Sensing, deep-learning based image reconstruction, low-rank + sparse methods, super-resolution
+					to handle the high-dimensional data processing efficiently.<br/><br/>
+
+					<ul>
+					<li> Compressed Sensing </li>
+					<li> deep-learning based image reconstruction </li>
+					<li> model-based reconstruction (motion, parametric) </li>
+					<li> low-rank + sparse methods </li>
+					<li> super-resolution </li>
+				</ul>
 
 					<header style="margin:2em 0 1em 0">
 					<h4 style="margin:0 0 0 0">Image quality assessment and control</h4>
-					<i>Contact: <script>getMail('thomas.kuestner', 1);</script>;&nbsp;<script>getMail('annika.liebgott', 2);</script></i>
+					<i>Contact: <script>getMail('thomas.kuestner', 1);</script></i>
 					</header>
 					Magnetic resonance imaging is a flexible imaging modality, but can be prone to a variety of imaging artefacts which can be grouped as: patient-related, hardware/scanner-related and signal-processing-related. The artefacts can degrade the derived image quality and impair a reliable diagnosis.
 					In order to provide a quantitative score, the human visual system needs to be mimicked which requires manual labeling by expert readers. Since expert labeling can be a time- and cost-intensive task, strategies for minimizing labeling effort need to be explored.
-					The work deals with accurately detecting and correcting artifacts to provide an objective and reliable quality control measure during acquisition and/or post-processing.<br/>
-					Applied methods include: feature extraction, classification, reinforcement learning, active learning, semi-supervised learning
+					The work deals with accurately detecting and correcting artifacts to provide an objective and reliable quality control measure during acquisition and/or post-processing.<br/><br/>
+					<ul>
+					<li> feature extraction </li>
+					<li> classification </li>
+					<li> reinforcement learning </li>
+					<li> active learning </li>
+					<li> semi-supervised learning </li>
+				  </ul>
 
 					<header style="margin:2em 0 1em 0">
 					<h4 style="margin:0 0 0 0">Semantic segmentation</h4>
-					<i>Contact: <script>getMail('marc.fischer', 1);</script>;&nbsp;<script>getMail('tobias.hepp', 1);</script></i>
+					<i>Contact: <script>getMail('marc.fischer', 1);</script></i>
 					</header>
 					<span class="image right"><img class="myImg" id="myImgSeg" src="images/teaching/Segmentation.png" alt="Segmentation of femora (Oberschenkelknochen), acetabulum (Hüftgelenkspfanne) and localization of landmarks (colored sphere)" style="width:100%;max-width:700px"/></span>
 
@@ -176,13 +196,13 @@
 					<li> Domain adaptation and domain generalization </li>
 					<li> Geometrical and statistical shape analysis</li>
 					</ul>
-					
+
 					<header style="margin:2em 0 1em 0">
 						<h4 style="margin:0 0 0 0">Probabilistic machine learning</h4>
-						<i>Contact: <script>getMail('sergios.gatidis', 1);</script> <script>getMail('tobias.hepp', 1);</script></i>
+						<i>Contact: <script>getMail('sergios.gatidis', 1);</script>; <script>getMail('thomas.kuestner', 1);</script>; <script>getMail('louisa.fay', 1);</script>; <script>getMail('erick.cobos', 'tuebingen.mpg.de');</script> </i>
 						</header>
 						<span class="image right"><img class="myImg" id="myImgSeg" src="images/teaching/probabilistic.svg" alt="Segmentation of femora (Oberschenkelknochen), acetabulum (Hüftgelenkspfanne) and localization of landmarks (colored sphere)" style="width:100%;max-width:700px"/></span>
-	
+
 						<!-- The Modal-->
 						<div id="myModalSeg" class="modal">
 							<span class="modal-close" id="closeButtonSeg">&times;</span>
@@ -191,7 +211,7 @@
 						</div>
 						<script>myModal("myModalSeg", "myImgSeg", "imgSeg", "captionSeg", "closeButtonSeg");</script>
 						<p align="justify">
-						A variety of problems in medical imaging can be traced back to elementary problems from statistics and machine learning. The goal of our research is to relate fundamental theoretical insights to real-world problems. 
+						A variety of problems in medical imaging can be traced back to elementary problems from statistics and machine learning. The goal of our research is to relate fundamental theoretical insights to real-world problems.
 						Our key topics are the quantification of uncertainty and the question of how causal relationships in observational data can be identified and  leveraged in machine learning applications.
 						</p>
 						<ul>
@@ -202,12 +222,12 @@
 						<li> Invariant mechanisms for domain generalization </li>
 						</ul>
 						<p align="justify"></p>
-						For student projects/thesis, expertise in probability theory, mathematical statistics, stochastic processes and/or probabilistic/statistical ML are of advantage.  Very good grades in undergraduate mathematics and related courses are expected.		
+						For student projects/thesis, expertise in probability theory, mathematical statistics, stochastic processes and/or probabilistic/statistical ML are of advantage.  Very good grades in undergraduate mathematics and related courses are expected.
 						</p>
 
 					<header style="margin:2em 0 1em 0">
-					<h4 style="margin:0 0 0 0">Adversarial learning</h4>
-					<i>Contact: <script>getMail('karim.armanious', 1);</script></i>
+					<h4 style="margin:0 0 0 0">Generative models</h4>
+					<i>Contact: <script>getMail('uddeshya.upa','gmail.com');</script></i>
 					</header>
 					<span class="image right"><img class="myImg" id="myImgAdv" src="images/teaching/GenerativeModel.png" alt="Example of image-translation from PET to equivalent CT using GANs" style="width:100%;max-width:700px"/></span>
 
@@ -219,8 +239,14 @@
 					</div>
 					<script>myModal("myModalAdv", "myImgAdv", "imgAdv", "captionAdv", "closeButtonAdv");</script>
 					The task of translating medical images between different domains has numerous useful applications. One example is the correction and restoration of artifact-corrupted images. Another potential application is the generation of novel image data between different modalities.
-					The work focuses on the development and refinement of medical image translation frameworks and their applications - specifically, GAN-based MR motion correction, GAN-based PET attenuation correction and GAN-based image inpainting.<br/>
-					Applied methods include: variational autoencoders, 3D GANs
+					The work focuses on the development and refinement of medical image translation frameworks and their applications - specifically, GAN-based MR motion correction, GAN-based PET attenuation correction and GAN-based image inpainting. Furthermore, the modelling and Inclusion
+					of the uncertainties can steer the generative task and provide additional information.<br/>
+
+					<ul>
+					<li> variational autoencoders </li>
+					<li> generative adversarial networks </li>
+					<li> uncertainty estimation </li>
+					</ul>
 
 					<h3 style="margin: 2em 0 0 0">Prerequisites</h3>
 					<ul>
