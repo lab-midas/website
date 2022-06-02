@@ -36,7 +36,7 @@
 											<li><a href="research.html">Research</a></li>
 											<li><a href="teaching.html">Teaching</a></li>
 											<li><a href="publications.php">Publications</a></li>
-											<li><a href="https://sites.google.com/site/kspaceastronauts/home">Code and Documentation</a></li>
+											<li><a href="code.html">Code and Data</a></li>
 										</ul>
 									</div>
 								</li>
@@ -60,15 +60,21 @@
 								<section>
 									<p><span class="image left"><img src="images/MIDAS_full.svg" height="300" alt="" /></span>
 									<!-- <h3>Research</h3> -->
-									Our aim is to advance methods and applications for processing and analysis of medical imaging data using machine learning methods. <br/><br/>
-									Specifically, we are working on the analysis of multi-parametric MRI, PET/MRI and PET/CT data aiming for functional characterization of tissues and tumors in vivo.
-									Our second focus is the development and implementation of a patient-centered workflow including novel imaging sequences, reconstruction techniques, image registration methods and methods for image quality assessment, image enhancement and automated image analysis in epidemiological MRI studies.
-									The third focus is to provide explainable and human-interpretable methods which enable the integration of machine learning applications into clinical practice.
-									</p>
+									Our aim is to advance and translate methods and applications for processing and analysis of medical imaging data using artificial intelligence (AI) and machine learning (ML) methods. <br/><br/>
+
+									Specifically, we focus on:<br/>
+									1. Developments for dynamic and multi-parametric MRI<br/>
+									2. Development of AI methods for medical imaging<br/>
+									3. Translation of AI to clinical applications<br/>
+									<br/>
+									with the interest of imaging applications and computing technology to provide explainable and human-interpretable methods that enable the integration of AI solutions into clinical practice and that provide
+									patient-centered workflows for the comprehensive diagnosis and management of neurological, cardiovascular and oncological patients.
+
+								</p>
 								</section>
 								<hr/>
-								<p style="margin: 0 0 5em 0">
-								<h2>Research concepts</h2>
+								<p style="margin: 0 0 1em 0">
+								<h2>Research focuses</h2>
 								<span class="image left"><img class="myImg" id="myImgOverview" src="images/research/overview.png" alt="Overview of data processing steps and information exchange" style="width:100%;max-width:700px"/></span>
 
 								<!-- The Modal-->
@@ -79,55 +85,29 @@
 								</div>
 								<script>myModal("myModalOverview", "myImgOverview", "imgOverview", "captionOverview", "closeButtonOverview");</script>
 								<p>
-								<h3>I. Patient-centered workflow</h3>
-								In order to provide a personalized treatment, automatic identification of a patient's phenotyp and biological age is required. Based on this information, the most suitable imaging protocol can be selected.
-								Suggestion systems thereby include image-derived features and non-imaging information (initial finding, anamnesis, genetics, laboratory tests). In order to guarantee a reliable image quality, data quality control measures (see automatic medical image quality assessment) are included.
-								Derived predictions can assist in an age-related diagnosis, adpatation of sequence protocols, guided therapy monitoring, treatment response prediction, biomarker identification etc.
+								<h3>I. Developments for dynamic and multi-parametric MRI</h3>
+								The development of efficient acquisition strategies for multi-parametric and dynamic imaging is essential for non-invasive tissue and metabolism characterization. Imaging in conjunction with appropriate reconstruction techniques, the handling of motion and other sources of imaging artifacts can improve the obtained image quality.
+								The aim is to provide an improved workflow with automatic generation of high resolution imaging data and to automatically derive clinical biomarkers that can be used in diagnosis.
 
-								<p>
-								<h4>Causal artificial intelligence</h4>
-								Machine learning-based medical image analysis still suffers from limited robustness and generalizability to out-of-distribution data.
-								The integration with non-imaging-data and expert knowledge can provide a better understanding of the causal generative process of medical images and can thus contribute to building machine learning models for medical image analysis that capture the relevant information and allow for reliable predictions in a clinical setting.
-							  </p>
-
-								<p>
-								<h4>Explainable artificial intelligence</h4>
-								In order to understand and explain how a machine learning method makes its prediction, a visual correlation of the features to the medical images is required. Following the understanding of how an architecture makes its prediction, one wants to understand why it works in a certain way: certain combination of processing steps and data (from single or multiple imaging modalities, single or multi-parametric imaging data, non-imaging data), under the influence of artefacts, etc. We are studying these relationships by causal inferences to answer these questions and to derive optimized operations and workflows.
-								</p>
-
-								<p>
-								<h4>Automated processing</h4>
-								In the context of large epidemiological studies, manual image analysis is often not feasible due to the overwhelming amount of data. Thus, automated analyses of whole body data is necessary. In order to perform automated analyses, a prerequisite is often the segmentation of target tissues and organs. A major aspect of our work is thus the adaptation and implementation of automated whole body segmentation in the context of large clinical and epidemiological studies using deep-learning approaches.
-								</p>
-								</p>
-
-								<p>
-								<h3>II. Artificial Intelligence based data processing</h3>
-								The application of artificial intelligence (AI) methods in acquisition, reconstruction, post-processing or analysis are investigated. The aim is to provide reliable, robust, specific and sensitive methods.
+								<p/>
+								<h3>II. Development of AI methods for medical imaging</h3>
+								The application of AI methods in acquisition, reconstruction, post-processing or analysis are investigated. The aim is to provide reliable, robust, specific and sensitive methods.
 								The inclusion of AI into medical data processing can help to improve performance by (but not limited to) increasing precision, boosting quality of service, easing processing and reducing computational times.
-								In the case of e.g. MR motion artifacts: Based on the obtained quality measure in the acquisition, respective artefact-correcting/aware reconstruction and post-processing methods are selected and combined. The acquisition can be steered by an adaptive MR subsampling connected to a network composed of DL-based CS reconstruction for multi-parametric imaging, incorporated motion detection and correction and an organ-specific segmentation with quality assurance.
 
-								<p>
-								<h4>Data acquisition, reconstruction and analysis</h4>
-								The development of efficient acquisition strategies for multi-parametric and dynamic imaging is essential for non-invasive tissue and metabolism characterization. Imaging in conjunction with appropriate reconstruction techniques and handling of motion and other sources of imaging artifacts can improve the obtained image quality.
-								The aim is to provide an improved workflow with automatic generation of high resolution imaging data and automatically derived clinical biomarkers that can be used in diagnosis.
-								</p>
+								ML-based medical image analysis still suffers from limited robustness and generalizability to out-of-distribution data. Furthermore, In the context of large epidemiological studies, manual image analysis is
+								often not feasible due to the overwhelming amount of data.
+								The integration with non-imaging-data and expert knowledge can provide a better understanding of the causal generative process and can thus contribute to building ML models for
+								medical imaging that capture the relevant information and allow for reliable predictions in a clinical setting.
 
-								<p>
-								<h4>Automated medical image quality assessment</h4>
-								Assessment of image quality is a prerequisite for further processing in most clinical situations and scientific analysis. In certain situations, when image quality has to be assessed in a short time interval or when data are analyzed by automated methods, image quality assessment has to be performed automatically. To this end, we develop machine learning based methods for identification, localization and quantification of image artifacts in medical images, specifically in whole body MRI.
-								</p>
-
-								<p>
-								<h4>Medical image translation</h4>
-								The task of translating medical images between different domains has numerous useful applications. One example is the correction and restoration of artifact-corrupted images. Another potential application is the generation of novel image data. We are working on the development and refinement of medical image translation frameworks and their applications. Specifically, we are currently adressing GAN-based motion correction, GAN-based PET attenuation correction and GAN-based image inpainting.</p>
-
-								</p>
-
+								<p/>
+								<h3>III. Translation of AI to clinical applications</h3>
+								We aim to implement state-of-the-art AI methods for clinical applications to support the clinicians in their daily work. These projects enable automated processing, simplified workflows and patient-phenotypic processing and analysis.
+								Imaging and non-imaging data are coherently processed to guide and monitor patients with neurological, cardiovascular and oncological diseases. One example use-case is the automatic analysis of whole-body imaging data such as PET-CT.
+								In this context we launched an ML challenge: <a href="https://autopet.grand-challenge.org/">autoPET</a>.
 
 								<hr/>
 								<h2>Research projects</h2>
-								For current ongoing research projects, please refer to <a href="teaching.html">teaching</a>, <a href="https://www.github.com/lab-midas">the Github projects</a> or <a href="https://sites.google.com/site/kspaceastronauts/home">software and code documentation</a>.
+								For current ongoing research projects, please refer to our <a href="publications.php">publictions</a>, <a href="code.html">codes and documentation</a> or <a href="teaching.html">open student projects</a>.
 
 							</p>
 							</div>
@@ -147,7 +127,7 @@
 							<li><script>getMail('thomas.kuestner', 'med.uni-tuebingen.de', ' class=\"icon solid fa-envelope\">');</script><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
-							<li>&copy; 2020 MIDAS.LAB </li><li>Design: <a href="https://html5up.net/">HTML5 UP</a></li><li><a href="privacy.html">Privacy/Imprint</a></li>
+							<li>&copy; MIDAS.LAB </li><li>Design: <a href="https://html5up.net/">HTML5 UP</a></li><li><a href="privacy.html">Privacy/Imprint</a></li>
 						</ul>
 					</footer>
 
