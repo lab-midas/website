@@ -94,7 +94,7 @@
 
 								$currYear = (int)date('o');
 
-								for($year=$currYear; $year>=2005; $year--){
+								for($year=$currYear; $year>=2021; $year--){
 
 								    /** @var PublicationYearFilterIterator $publications2018 */
 								    $publicationsCurr = new PublicationYearFilterIterator(new ArrayIterator($publications), $year);
@@ -110,14 +110,17 @@
 								    foreach ($publicationsCurr as $publication) {
 								        //echo $publication->getPublicationURL(), "<br>";
 								        echo $publication->getAuthors() . "<br>";
-								        echo "<b><a href='" . $publication->getPublicationURL() . "' target='_blank'>" . $publication->getTitle() . "</a></b><br>";
+								        //echo "<b><a href='" . $publication->getPublicationURL() . "' target='_blank'>" . $publication->getTitle() . "</a></b><br>";
+												echo "<b>" . $publication->getTitle() . "</b><br>";
 								        echo "<i>" . $publication->getPublisherDetails() . "</i>, ";
 								        //echo $publication->getNbCitations(), " ";
 								        //echo $publication->getCitationsURL(), "<br>";
 								        echo $publication->getYear() . "</p><br>";
 								    }
 										echo "<hr />";
-								} ?>
+								}
+								readfile("python/bib.dat");
+								?>
 
 							</div>
 						</section>
